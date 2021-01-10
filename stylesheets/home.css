@@ -1,0 +1,675 @@
+:root {
+    --baige: #E18B57;
+    --dark-blue: #144556;
+    --light-blue: #92D5D1;
+    --gray: #E5EBE5;
+    --slight-beige: #F2F2D2;
+    --black: #000;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--gray);
+}
+
+ul {
+    list-style: none;
+}
+
+#current-section {
+    border-bottom: 2px solid var(--baige);
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: var(--gray);
+    width: 100%;
+}
+
+/* Section Area */
+.section-area {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.section-area:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+#about-pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 15px;
+    width: 50%;
+}
+
+.section-area .section-text {
+    padding: 10px;
+    width: 50%;
+}
+
+#about-pic img {
+    width: 70%;
+    height: auto;
+    border-radius: 100px;
+    box-shadow: 2px 2px 3px var(--black);
+}
+
+.section-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-text p {
+    margin-top: 10px 0;
+    line-height: 2rem;
+}
+
+.project-links {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Nav Extender */
+#extend-nav {
+    position: fixed;
+    top: 15px;
+    right: 10px;
+    z-index: 11;
+    color: var(--slight-beige);
+    transition: all .3s ease-in-out;
+    text-shadow: 1px 1px 2px var(--black);
+    display: none;
+}
+
+#extend-nav:hover {
+    cursor: pointer;
+}
+
+#extend-nav.extended {
+    transform: rotate(180deg);
+    color: var(--baige);
+}
+
+/* Navbar */
+#navbar {
+    background: var(--dark-blue);
+    width: 100%;
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    box-shadow: 4px 0 4px var(--black);
+    z-index: 10;
+    transition: all .4s ease-in-out;
+}
+
+#navbar.minimize {
+    transform: translateY(-170px);
+}
+
+#navbar ul {
+    margin-right: 15px;
+    display: flex;
+}
+
+#navbar ul li {
+    margin-right: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all .2s ease-in-out;
+}
+
+#navbar ul li:hover {
+    border-bottom: 2px solid var(--baige);
+}
+
+/* Top Left/Center Logo */
+#name-logo {
+    height: 60px;
+    width: 60px;
+    background: var(--gray);
+    color: var(--dark-blue);
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-weight: bolder;
+    font-size: 1.4rem;
+}
+
+/* Hero Section */
+#hero::before {
+    position: absolute;
+    content: '';
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .4);
+}
+
+#hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    background: url(../photos/coding\ background.jpg) no-repeat fixed center/cover;
+    z-index: 1;
+}
+
+#hero h1,
+#hero h2,
+#hero h3,
+#hero a {
+    z-index: 5;
+}
+
+#hero h1 {
+    font-weight: bolder;
+    font-size: 5rem;
+    color: var(--slight-beige);
+    text-shadow: 2px 2px 5px var(--black);
+    padding: 0 10px;
+}
+
+#hero h2,
+#hero h3 {
+    font-weight: bolder;
+    font-size: 2.5rem;
+    color: var(--light-blue);
+    text-shadow: 2px 2px 3px var(--black);
+    padding: 0 10px
+}
+
+#hero a {
+    background: var(--dark-blue);
+    color: var(--baige);
+    padding: 7px;
+    margin-top: 15px;
+    text-shadow:  1px 1px 1px var(--black);
+    font-weight: bolder;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px var(--black);
+}
+
+#hero a:hover {
+    background: var(--gray);
+    color: var(--dark-blue);
+}
+
+#about-me {
+    width: 100%;
+    background: var(--light-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#about-me h1 {
+    color: var(--slight-beige);
+    text-shadow: 1px 1px 2px var(--black);
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+/* Projects */
+#projects {
+    background: var(--baige);
+    width: 100%;
+    padding-top: 15px;
+}
+
+.project-lead-headings {
+    color: var(--dark-blue);
+    text-shadow: 1px 1px 2px var(--black);
+    font-weight: bolder;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.project-pics {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 25px
+}
+
+.project-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.project-pics img {
+    width: 50%;
+    height: auto;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px var(--black);
+    transition: all .7s ease-in-out;
+}
+
+.project-pics img:hover {
+    transform: scale(1.1);
+}
+
+.project-text {
+    margin: 0 15px;
+    transition: all .5s ease-in-out;
+}
+
+.project-text p {
+    margin: 5px 0;
+    font-weight: bolder;
+}
+
+/* Ball Avoid Section */
+#ball-avoid h2 {
+    color: var(--dark-blue);
+    text-shadow: 1px 1px 2px var(--black);
+    font-weight: bolder;
+    font-size: 1.4rem;
+}
+
+#ball-section .project-pics img {
+    width: 90%;
+}
+
+#ball-avoid button {
+    background: var(--dark-blue);
+    border-style: none;
+    padding: 5px;
+    margin: 5px;
+    color: var(--slight-beige);
+    box-shadow: 1px 1px 2px var(--black);
+    font-size: 1.1rem;
+    transition: background-color .3s ease-in-out;
+}
+
+#ball-avoid button:hover {
+    background: var(--slight-beige);
+    color: var(--dark-blue);
+    font-weight: bolder;
+    opacity: .9;
+    cursor: pointer;
+}
+
+#ball-avoid button:focus {
+    outline: 2px solid var(--gray);
+}
+
+#ball-avoid  i {
+    color: var(--dark-blue);
+    text-shadow: 1px 1px 2px var(--black);
+    margin: 5px;
+    transition: all .3s ease-in-out
+}
+
+#ball-avoid i:hover {
+    color: var(--gray);
+}
+
+/* Matrix Section */
+#matrix-section {
+    background: var(--slight-beige);
+}
+
+#matrix-section .project-pics {
+    flex-direction: column;
+}
+
+#matrix-algo h2 {
+    color: var(--baige);
+    text-shadow: 1px 1px 2px var(--black);
+    font-weight: bolder;
+    font-size: 1.4rem;
+}
+
+#matrix-algo button {
+    background: var(--baige);
+    border-style: none;
+    padding: 5px;
+    margin: 5px;
+    color: var(--slight-beige);
+    box-shadow: 1px 1px 2px var(--black);
+    font-size: 1.1rem;
+    transition: background-color .3s ease-in-out;
+}
+
+#matrix-algo button:hover {
+    background: var(--black);
+    color: var(--baige);
+    font-weight: bolder;
+    opacity: .9;
+    cursor: pointer;
+}
+
+#matrix-algo button:focus {
+    outline: 2px solid var(--dark-blue);
+}
+
+#matrix-algo  i {
+    color: var(--baige);
+    text-shadow: 1px 1px 2px var(--black);
+    margin: 5px;
+    transition: all .3s ease-in-out
+}
+
+#matrix-algo i:hover {
+    color: var(--black);
+}
+
+/* Huck It Section */
+#huck-it-section {
+    background: var(--dark-blue);
+}
+
+#huck-it-section .project-pics img {
+    box-shadow: none;
+    width: 80%;
+}
+
+#huck-it h2 {
+    color: var(--baige);
+    text-shadow: 1px 1px 2px var(--black);
+    font-weight: bolder;
+    font-size: 1.4rem;
+}
+
+#huck-it button {
+    background: var(--baige);
+    border-style: none;
+    padding: 5px;
+    margin: 5px;
+    color: var(--dark-blue);
+    box-shadow: 1px 1px 2px var(--black);
+    font-size: 1.1rem;
+    transition: background-color .3s ease-in-out;
+}
+
+#huck-it button:hover {
+    background: var(--gray);
+    color: var(--baige);
+    font-weight: bolder;
+    opacity: .9;
+    cursor: pointer;
+}
+
+#huck-it button:focus {
+    outline: 2px solid var(--slight-beige);
+}
+
+#huck-it  i {
+    color: var(--baige);
+    text-shadow: 1px 1px 2px var(--black);
+    margin: 5px;
+    transition: all .3s ease-in-out
+}
+
+#huck-it i:hover {
+    color: var(--slight-beige);
+}
+
+#huck-it .project-text {
+    color: var(--slight-beige);
+    font-weight: lighter;
+}
+
+/* Frisbee App Section */
+#frisbee-section {
+    background: none;
+}
+
+#frisbee-section .project-pics img {
+    box-shadow: none;
+    width: 80%;
+}
+
+#frisbee-app h2 {
+    color: var(--dark-blue);
+    text-shadow: 1px 1px 2px var(--black);
+    font-weight: bolder;
+    font-size: 1.4rem;
+}
+
+#frisbee-app button {
+    background: var(--dark-blue);
+    border-style: none;
+    padding: 5px;
+    margin: 5px;
+    color: var(--slight-beige);
+    box-shadow: 1px 1px 2px var(--black);
+    font-size: 1.1rem;
+    transition: background-color .3s ease-in-out;
+}
+
+#frisbee-app button:hover {
+    background: var(--slight-beige);
+    color: var(--dark-blue);
+    font-weight: bolder;
+    opacity: .9;
+    cursor: pointer;
+}
+
+#frisbee-app button:focus {
+    outline: 2px solid var(--slight-beige);
+}
+
+#frisbee-app  i {
+    color: var(--dark-blue);
+    text-shadow: 1px 1px 2px var(--black);
+    margin: 5px;
+    transition: all .3s ease-in-out
+}
+
+#frisbee-app i:hover {
+    color: var(--slight-beige);
+}
+
+/* Wedding Section */
+#wedding-section {
+    background: var(--slight-beige);
+}
+
+#wedding-section .project-pics {
+    flex-direction: row;
+}
+
+#wedding-section .project-pics img {
+    box-shadow: none;
+    width: 80%;
+}
+
+#wedding-site h2 {
+    color: var(--baige);
+    text-shadow: 1px 1px 2px var(--black);
+    font-weight: bolder;
+    font-size: 1.4rem;
+}
+
+#wedding-site button {
+    background: var(--baige);
+    border-style: none;
+    padding: 5px;
+    margin: 5px;
+    color: var(--slight-beige);
+    box-shadow: 1px 1px 2px var(--black);
+    font-size: 1.1rem;
+    transition: background-color .3s ease-in-out;
+}
+
+#wedding-site button:hover {
+    background: var(--black);
+    color: var(--baige);
+    font-weight: bolder;
+    opacity: .9;
+    cursor: pointer;
+}
+
+#wedding-site button:focus {
+    outline: 2px solid var(--dark-blue);
+}
+
+#wedding-site  i {
+    color: var(--baige);
+    text-shadow: 1px 1px 2px var(--black);
+    margin: 5px;
+    transition: all .3s ease-in-out
+}
+
+#wedding-site i:hover {
+    color: var(--black);
+}
+
+
+/* Resume Section */
+#resume {
+    width: 100%;
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--light-blue);
+}
+
+#resume > h1 {
+    color: var(--slight-beige);
+    text-shadow: 1px 1px 2px var(--black);
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.resume-section {
+    display: flex;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.resume-section .resume-section-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    color: var(--dark-blue);
+    text-shadow: 1px 1px 2px var(--black);
+    font-weight: bolder;
+    font-size: 1.6rem;
+}
+
+.resume-section .resume-section-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    background: var(--slight-beige);
+    margin: 15px;
+    border-radius: 15px;
+}
+
+.example {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.example h3,
+.example h4 {
+    color: var(--dark-blue);
+    font-size: 1.1rem;
+    margin: 2px 0;
+}
+
+.example ul {
+    margin-top: 5px;
+    font-weight: bolder;
+    list-style-type: disc;
+    padding: 0 15px;
+}
+
+/* Contact Section */
+#contact {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+    background: var(--slight-beige);
+    color: var(--baige);
+    font-weight: bolder;
+}
+
+#contact h1,
+#contact h3 {
+    text-shadow: 1px 1px 1px var(--black);
+    font-size: 1.4rem;
+    margin: 5px 0;
+}
+
+.method {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-shadow: 1px 1px 1px var(--black);
+}
+
+.social-links {
+    display: flex;
+    align-items: center;
+}
+
+.social-links i {
+    color: var(--baige);
+    text-shadow: 1px 1px 1px var(--black);
+    margin: 0 5px;
+    transition: all .4s ease-in-out;
+}
+
+.social-links i:hover {
+    color: var(--black)
+}
+
+.method a {
+    color: var(--baige);
+    transition: all .4s ease-in-out;
+}
+
+.method a:hover {
+    color: var(--black);
+}
+

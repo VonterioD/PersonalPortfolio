@@ -1,0 +1,86 @@
+.section-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-area .section-text {
+    width: 100%;
+}
+
+.section-area:nth-child(odd){
+    flex-direction: column;
+}
+
+/* Navbar */
+#navbar {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    height: 240px;
+}
+
+#navbar ul {
+    flex-direction: column;
+    margin: 0;
+}
+
+#name-logo {
+    margin: 5px 0;
+}
+
+#navbar ul li {
+    margin: 5px 0;
+}
+
+#extend-nav {
+    display: inline;
+}
+
+/* Hero */
+#hero h2,
+#hero h3 {
+    font-size: 2rem;
+}
+
+#hero h1 {
+    font-size: 4.5rem;
+}
+
+/* About Me */
+#about-pic {
+    width: 100%;
+}
+
+#about-pic img {
+    border-radius: 250px;
+}
+
+/* Projects */
+.project-pics {
+    width: 100%;
+}
+
+#matrix-section .project-pics {
+    flex-direction: row;
+}
+
+#matrix-section .project-pics img {
+    width: 90%;
+}
+
+/* Resume */
+.resume-section {
+    flex-direction: column;
+    align-items: center;
+}
+
+.resume-section .resume-section-icon {
+    font-weight: 1.3rem;
+    width: 100%;
+}
+
+.resume-section .resume-section-text {
+    width: 95%;
+    margin-right: 0 10px;
+}
