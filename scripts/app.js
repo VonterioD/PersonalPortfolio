@@ -57,6 +57,7 @@ const contactSection = document.getElementById("contact");
 
 const navBar = document.getElementById("navbar");
 const navExtender = document.getElementById("extend-nav");
+const workBtn = document.getElementById("see-work");
 
 //Scroll event for navbar opacity
 document.addEventListener("scroll", () => {
@@ -266,3 +267,10 @@ contactLink.addEventListener("click", (e) => {
 
     contactSection.scrollIntoView({behavior:"smooth", block:"start", inline:"start"});
 });
+
+// Smooth scroll for see work button
+workBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    projectSection.scrollIntoView({behavior:"smooth", block:"start", inline:"start"});
+})
