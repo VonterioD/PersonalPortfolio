@@ -296,6 +296,10 @@ ul {
     font-weight: bolder;
 }
 
+.project-text a {
+    color: var(--black);
+}
+
 /* Ball Avoid Section */
 #ball-avoid h2 {
     color: var(--dark-blue);
