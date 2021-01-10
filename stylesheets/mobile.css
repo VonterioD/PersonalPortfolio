@@ -38,6 +38,10 @@
 }
 
 /* Hero */
+#hero {
+    background-attachment: scroll;
+}
+
 #hero h2,
 #hero h3 {
     font-size: 2rem;
